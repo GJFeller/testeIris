@@ -4,56 +4,28 @@
 angular.
     module('teamList').
 component('serieAList', {
-    template:
-    '<ul> ' +
-    '<li ng-repeat="team in $ctrl.teams">' +
-    '<span>{{team.name}}</span>' +
-    '<p>{{team.city}}</p>' +
-    '<p>{{team.state}}</p>' +
-    '</li>' +
-    '</ul>',
-    controller: function SerieAController() {
-        this.teams = [
-            {
-                name: 'Gremio',
-                city: 'Porto Alegre',
-                state: 'Rio Grande do Sul'
-            }, {
-                name: 'Palmeiras',
-                city: 'Sao Paulo',
-                state: 'Sao Paulo'
-            }, {
-                name: 'Flamengo',
-                city: 'Rio de Janeiro',
-                state: 'Rio de Janeiro'
-            }
-        ];
-    }
+    templateUrl: 'team-list/team-list.template.html',
+    controller: [ '$http',
+        function SerieAController($http) {
+            var self = this;
+            self.orderProp = 'name';
+
+            $http.get('Teams-data/serieATeams.json').then(function(response) {
+                self.teams = response.data;
+            })
+        }
+    ]
 }).
 component('serieBList', {
-    template:
-    '<ul> ' +
-    '<li ng-repeat="team in $ctrl.teams">' +
-    '<span>{{team.name}}</span>' +
-    '<p>{{team.city}}</p>' +
-    '<p>{{team.state}}</p>' +
-    '</li>' +
-    '</ul>',
-    controller: function SerieBController() {
-        this.teams = [
-            {
-                name: 'Internacional',
-                city: 'Porto Alegre',
-                state: 'Rio Grande do Sul'
-            }, {
-                name: 'Juventude',
-                city: 'Caxias do Sul',
-                state: 'Rio Grande do Sul'
-            }, {
-                name: 'Figueirense',
-                city: 'Florianopolis',
-                state: 'Santa Catarina'
-            }
-        ];
-    }
+    templateUrl: 'team-list/team-list.template.html',
+    controller: [ '$http',
+        function SerieBController($http) {
+            var self = this;
+            self.orderProp = 'name';
+
+            $http.get('Teams-data/serieBTeams.json').then(function(response) {
+                self.teams = response.data;
+            })
+        }
+    ]
 });

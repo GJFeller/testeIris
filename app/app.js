@@ -6,10 +6,20 @@ angular.module('myApp', [
   'myApp.view1',
   'myApp.view2',
   'myApp.version',
-  'teamList'
+  'teamList',
+  'teamDetail'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
 
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.
+      when('/view1', {
+        template: '<serie-a-list></serie-a-list>'
+  }).when('/view2', {
+        template: '<serie-b-list></serie-b-list>'
+  }).when('/:teamId', {
+        template: '<team-detail></team-detail>'
+  }).when('/:teamId', {
+      template: '<team-detail></team-detail>'
+  });
 }]);

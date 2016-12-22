@@ -1,0 +1,21 @@
+[
+  {
+    "id": "gremio",
+    "imageUrl": "Teams-data/images/gremio.jpg",
+    "name": "Gremio",
+    "city": "Porto Alegre",
+    "state": "Rio Grande do Sul"
+  }, {
+    "id": "palmeiras",
+    "imageUrl": "Teams-data/images/palmeiras.jpg",
+    "name": "Palmeiras",
+    "city": "Sao Paulo",
+    "state": "Sao Paulo"
+  }, {
+    "id": "flamengo",
+    "imageUrl": "Teams-data/images/flamengo.jpg",
+    "name": "Flamengo",
+    "city": "Rio de Janeiro",
+    "state": "Rio de Janeiro"
+  }
+]

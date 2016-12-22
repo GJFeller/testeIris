@@ -1,0 +1,21 @@
+[
+  {
+    "id": "inter",
+    "imageUrl": "Teams-data/images/inter.jpg",
+    "name": "Internacional",
+    "city": "Porto Alegre",
+    "state": "Rio Grande do Sul"
+  }, {
+    "id": "juventude",
+    "imageUrl": "Teams-data/images/juventude.jpg",
+    "name": "Juventude",
+    "city": "Caxias do Sul",
+    "state": "Rio Grande do Sul"
+  }, {
+    "id": "figueirense",
+    "imageUrl": "Teams-data/images/figueirense.jpg",
+    "name": "Figueirense",
+    "city": "Florianopolis",
+    "state": "Santa Catarina"
+  }
+]
