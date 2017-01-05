@@ -11,11 +11,5 @@
     "name": "Juventude",
     "city": "Caxias do Sul",
     "state": "Rio Grande do Sul"
-  }, {
-    "id": "figueirense",
-    "imageUrl": "Teams-data/images/figueirense.jpg",
-    "name": "Figueirense",
-    "city": "Florianopolis",
-    "state": "Santa Catarina"
   }
 ]
