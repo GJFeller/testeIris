@@ -4,10 +4,15 @@
 angular
     .module('teamDetail').
     component('teamDetail', {
-        template: 'TBD: Detail view for <span>{{$ctrl.teamId}}</span>',
-        controller: ['$routeParams',
-            function TeamDetailController($routeParams) {
-                this.teamId = $routeParams.teamId;
+        templateUrl: "team-detail/team-detail.template.html",
+        controller: ['$http', '$routeParams',
+            function TeamDetailController($http, $routeParams) {
+                var self = this;
+
+                $http.get('Teams-data/' + $routeParams.teamId + '.json').then(function(response) {
+                    self.team = response.data;
+                    self.team.officialHonours = response.data.honours;
+                });
             }
         ]
 });

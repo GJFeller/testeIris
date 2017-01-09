@@ -2,11 +2,24 @@
   "name": "Esporte Clube Juventude",
   "born": "29/06/1913",
   "stadium": "Alfredo Jaconi",
-  "oficial-honours": {
-    "campeonato-gaucho": [
-      "1998"
-    ],
-    "campeonato-brasileiro-serie-b": ["1994"],
-    "copa-do-brasil": ["1999"]
-  }
+  "honours": [
+    {
+      "name": "Campeonato Gaucho",
+      "years": [
+        "1998"
+      ]
+    },
+    {
+      "name": "Campeonato Brasileiro Serie B",
+      "years": [
+        "1994"
+      ]
+    },
+    {
+      "name": "Copa do Brasil",
+      "years": [
+        "1999"
+      ]
+    }
+  ]
 }

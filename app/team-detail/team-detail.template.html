@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<!--<img ng-src="{{$ctrl.team.images[0]}}" class="phone" />!-->
+
+<h1>{{$ctrl.team.name}}</h1>
+
+<p>Fundação: {{$ctrl.team.born}}</p>
+
+<p>Estádio: {{$ctrl.team.stadium}}</p>
+
+<h2>Títulos</h2>
+<!--<p>{{$ctrl.team.honours}}</p>!-->
+
+<ul class="team">
+    <li ng-repeat="honour in $ctrl.team.honours">
+        <h3>{{honour.name}} - {{honour.years.length}} títulos</h3>
+        <i ng-repeat="year in honour.years">
+            {{year}}
+        </i>
+    </li>
+</ul>
